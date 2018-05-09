@@ -1,0 +1,16 @@
+{
+  "name": "scraping",
+  "version": "1.0.0",
+  "description": "projeto para coleta de dados na web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JFDValente",
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest",
+    "request": "latest",
+    "cheerio": "latest"
+  }
+}

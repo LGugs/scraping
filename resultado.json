@@ -1,0 +1,77 @@
+[
+    {
+        "codigo": "22000",
+        "orgao": "MINIST. DA AGRICUL.,PECUARIA E ABASTECIMENTO",
+        "total": "13.072.853.538,50"
+    },
+    {
+        "codigo": "24000",
+        "orgao": "MINISTERIO DA CIENCIA, TECNOLOGIA E INOVACAO",
+        "total": "6.905.022.455,12"
+    },
+    {
+        "codigo": "42000",
+        "orgao": "MINISTERIO DA CULTURA",
+        "total": "1.688.296.831,47"
+    },
+    {
+        "codigo": "52000",
+        "orgao": "MINISTERIO DA DEFESA",
+        "total": "76.009.450.988,25"
+    },
+    {
+        "codigo": "26000",
+        "orgao": "MINISTERIO DA EDUCACAO",
+        "total": "85.088.283.968,76"
+    },
+    {
+        "codigo": "25000",
+        "orgao": "MINISTERIO DA FAZENDA",
+        "total": "1.067.398.763.152,03"
+    },
+    {
+        "codigo": "53000",
+        "orgao": "MINISTERIO DA INTEGRACAO NACIONAL",
+        "total": "4.892.081.198,70"
+    },
+    {
+        "codigo": "30000",
+        "orgao": "MINISTERIO DA JUSTICA",
+        "total": "11.169.930.175,18"
+    },
+    {
+        "codigo": "58000",
+        "orgao": "MINISTERIO DA PESCA E AQUICULTURA",
+        "total": "111.175.664,71"
+    },
+    {
+        "codigo": "33000",
+        "orgao": "MINISTERIO DA PREVIDENCIA SOCIAL",
+        "total": "442.735.823.351,81"
+    },
+    {
+        "codigo": "36000",
+        "orgao": "MINISTERIO DA SAUDE",
+        "total": "38.297.767.389,02"
+    },
+    {
+        "codigo": "56000",
+        "orgao": "MINISTERIO DAS CIDADES",
+        "total": "22.480.531.683,67"
+    },
+    {
+        "codigo": "41000",
+        "orgao": "MINISTERIO DAS COMUNICACOES",
+        "total": "2.168.296.617,10"
+    },
+    {
+        "codigo": "35000",
+        "orgao": "MINISTERIO DAS RELACOES EXTERIORES",
+        "total": "2.028.163.939,89"
+    },
+    {
+        "codigo": "32000",
+        "orgao": "MINISTERIO DE MINAS E ENERGIA",
+        "total": "3.504.106.503,54"
+    }
+]
