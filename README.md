@@ -1,2 +1,2 @@
-# simbora-api
-api do projeto simbora (caronas)
+# SCRAPING
+Projeto para captura de resumo de notícias
