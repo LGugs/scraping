@@ -40,4 +40,21 @@ router.get('/portaldoholanda', async(req,res) =>{
   res.render('news',{site});
 });
 
+router.get('/g1', async(req,res) =>{
+  let url = 'http://g1.globo.com/';
+  let jqueryList = '.feed-post-body';
+  let jqueryTitle = '.feed-post-body-title';
+  let jqueryTime = '.feed-post-datetime';
+  let jquerySummary = '.feed-post-body-resumo';
+
+  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary);
+
+  var site = {
+    title : 'G1 - Globo',
+    news : news,
+  }
+
+  res.render('news',{site});
+});
+
 module.exports = app => app.use('/',router);
