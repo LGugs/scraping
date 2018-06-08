@@ -16,7 +16,7 @@ app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dis
 
 require('./controllers/news')(app);
 
-var port = 8080
+var port = 80
 app.listen(port,function(err){
   if (!err){
     console.log('Servidor iniciado na porta '+port);
