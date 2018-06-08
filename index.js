@@ -13,10 +13,9 @@ app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist
 app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist'))); // redirect JS jQuery
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css'))); // redirect CSS bootstrap
 
-
 require('./controllers/news')(app);
 
-var port = 8080;
+const port = process.env.PORT || 5000;
 app.listen(port,function(err){
   if (!err){
     console.log('Servidor iniciado na porta '+port);
