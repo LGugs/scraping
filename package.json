@@ -5,20 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.0.0",
     "cheerio": "^1.0.0-rc.2",
     "ejs": "~2.5.7",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "path": "^0.12.7",
-    "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "popper.js": "^1.14.3"
   }
 }
