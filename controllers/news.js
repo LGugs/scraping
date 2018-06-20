@@ -3,7 +3,11 @@ const router = express.Router();
 const scraping = require('../search/scraping')();
 
 router.get('/', async(req,res) =>{
-  res.render('home');
+  res.render('pages/home');
+});
+
+router.get('/dictionary', async(req,res) =>{
+  res.render('pages/dictionary');
 });
 
  router.get('/oantagonista', async(req,res) =>{
@@ -20,7 +24,7 @@ router.get('/', async(req,res) =>{
       news : news,
     }
 
-    res.render('news',{site});
+    res.render('pages/news',{site});
 });
 
 router.get('/portaldoholanda', async(req,res) =>{
@@ -37,7 +41,7 @@ router.get('/portaldoholanda', async(req,res) =>{
     news : news,
   }
 
-  res.render('news',{site});
+  res.render('pages/news',{site});
 });
 
 router.get('/g1', async(req,res) =>{
@@ -54,7 +58,25 @@ router.get('/g1', async(req,res) =>{
     news : news,
   }
 
-  res.render('news',{site});
+  res.render('pages/news',{site});
+});
+
+// not working
+router.get('/yahoo', async(req,res) =>{
+  let url = 'https://br.yahoo.com';
+  let jqueryList = '.O\(n\)\:f h3';
+  let jqueryTitle = '.O\(n\)\:f h3';
+  let jqueryTime = '.O\(n\)\:f h3';
+  let jquerySummary = '.O\(n\)\:f h3';
+
+  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary);
+
+  var site = {
+    title : 'Yahoo!',
+    news : news,
+  }
+
+  res.render('pages/news',{site});
 });
 
 module.exports = app => app.use('/',router);

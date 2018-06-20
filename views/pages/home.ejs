@@ -1,0 +1,28 @@
+<%- contentFor('body') %>
+
+<script>
+  $(document).ready(function(){
+    $("#sites").change(function(){
+      $("#btn").attr("href", $("#sites").val());
+    });
+  });
+</script>
+
+<div class="jumbotron text-center">
+  <h1>WebLens</h1>
+  <h3>Clique no formulário abaixo e selecione seu site de notícias!</h3>
+  <h2 class="glyphicon glyphicon glyphicon-arrow-down"></h2>
+</div>
+<form>
+  <div class="form-group" align="center">
+    <label class="sr-only"></label>
+    <select class="form-control input-lg" id="sites">
+      <option hidden>Selecione um site de notícias!</option>
+      <option value="/oantagonista">O Antagonista</option>
+      <option value="/portaldoholanda">Portal do Holanda</option>
+      <option value="/g1">G1 - Globo</option>
+    </select>
+    <br>
+    <a id="btn" href="#" class="btn btn-success btn-lg btn-custom" role="button">Acessar</a>
+  </div>
+</form>

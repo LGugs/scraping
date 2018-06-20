@@ -5,7 +5,7 @@ module.exports = function(){
 
     return {
         getNews: async function (url,jqueryList,jqueryTitle,jqueryTime,jquerySummary){
-            let news = []; 
+            let news = [];
             // Metodo que faz a requisição para tratarmos (raspar) os dados
             let html = await request(url);
 

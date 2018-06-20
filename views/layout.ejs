@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WebLens</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <script src="js2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: lightgray;
+      }
+      .jumbotron {
+        background: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .form-group{
+        margin-top: 0;
+      }
+      .btn-custom{
+        width: 500px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default role="navigation"">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/" title="WebLens - Notícias acessíveis para pessoas cegas!">
+            <span class="glyphicon glyphicon glyphicon-search"></span>
+              WebLens
+            </a>
+          </div>
+          <div class="navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="/dictionary">Dicionário</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <%- body %>
+      </div>
+    </main>
+    <footer>
+      <p class="text-muted">ICOMP - Engenharia de Software - TESI</p>
+    </footer>
+  </body>
+</html>
