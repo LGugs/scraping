@@ -7,7 +7,10 @@ router.get('/', async(req,res) =>{
 });
 
 router.get('/dictionary', async(req,res) =>{
-  res.render('pages/dictionary');
+
+  var dados = [{word: 'copa', count: 100},{word: 'neymar', count: 90},{word: 'futebol', count: 85},{word: 'crise', count: 70}];
+
+  res.render('pages/dictionary', {dados});
 });
 
  router.get('/oantagonista', async(req,res) =>{

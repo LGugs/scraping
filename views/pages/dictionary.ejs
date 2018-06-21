@@ -1,0 +1,23 @@
+<%- contentFor('body') %>
+
+<div class="text-center">
+  <h1>Dicionário</h1>
+  <h3>Palavras mais apresentadas pelos sites acessados!</h3>
+</div>
+<br>
+<table class="table table-responsive table-hover table-bordered table-header-group table-custom">
+  <thead>
+    <tr>
+      <th>Palavra</th>
+      <th>Contagem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% dados.forEach(function(dados){ %>
+      <tr>
+        <td><%= dados.word %></td>
+        <td><%= dados.count %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
