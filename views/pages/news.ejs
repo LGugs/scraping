@@ -15,7 +15,7 @@
         <br>
         <div class="col-md-12">
             <% for(news of site.news){ %>
-            <h2> <%= news.title %> </h2>
+            <h2><a href="<%= news.link %>"> <%= news.title %> </a></h2>
             <p> <%= news.summary %> </p>
             <div>
                 <span class="badge"> <%= news.time %> </span>

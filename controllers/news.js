@@ -16,8 +16,9 @@ router.get('/dictionary', async(req,res) =>{
     let jqueryTitle = '.article_link h2';
     let jqueryTime = '.article_link span time';
     let jquerySummary = '.article_link p';
+    let jqueryTitleLink = 'a.article_link';
 
-    let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary);
+    let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary,jqueryTitleLink);
 
     var site = {
       title : 'O Antagonista',
@@ -33,8 +34,9 @@ router.get('/portaldoholanda', async(req,res) =>{
   let jqueryTitle = '.mvp-blog-story-text h2';
   let jqueryTime = '';
   let jquerySummary = '.mvp-blog-story-text p';
+  let jqueryTitleLink = '.mvp-blog-story-out a';
 
-  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary);
+  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary,jqueryTitleLink);
 
   var site = {
     title : 'Portal do Holanda',
@@ -50,8 +52,9 @@ router.get('/g1', async(req,res) =>{
   let jqueryTitle = '.feed-post-body-title';
   let jqueryTime = '.feed-post-datetime';
   let jquerySummary = '.feed-post-body-resumo';
+  let jqueryTitleLink = 'a.feed-post-link';
 
-  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary);
+  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary,jqueryTitleLink);
 
   var site = {
     title : 'G1 - Globo',
