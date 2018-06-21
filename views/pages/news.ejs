@@ -3,12 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title><%= site.title %></title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   </head>
   <body>
-    <script src="js2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
     <div class="container">
         <h1> Notícias: <%= site.title %></h1>
         <br>
@@ -26,4 +22,15 @@
     </div>
 
   </body>
+
+  <script>
+    var teste = ['sobre','STF','Brasil', 'Trump', 'Lula', 'presidente', 'corregedor', 'governo', 'integrantes'];
+
+    $(".col-md-12").unmark({
+      done: function() {
+        $(".col-md-12").mark(teste);
+      }
+    });
+  </script>
+
 </html>

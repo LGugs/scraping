@@ -11,11 +11,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use('/js', express.static(path.join(__dirname, '/src/js'))); // redirect bootstrap JS
-app.use('/js2', express.static(path.join(__dirname, '/node_modules/jquery/dist'))); // redirect JS jQuery
+app.use('/js', express.static(path.join(__dirname, '/src/js'))); // redirect JS
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist'))); // redirect JS jQuery
 app.use('/css', express.static(path.join(__dirname, '/src/css'))); // redirect CSS bootstrap
-app.use('/fonts', express.static(path.join(__dirname, '/src/css/fonts'))); // redirect CSS bootstrap
-
+app.use('/fonts', express.static(path.join(__dirname, '/src/css/fonts'))); // redireciona para fonts
 
 require('./controllers/news')(app);
 

@@ -9,8 +9,12 @@ module.exports = function(){
 
             // Metodo que faz a requisição para tratarmos (raspar) os dados
             let html = await request(url);
-            
+
             var $ = cheerio.load(html);
+
+            var cont = $(this).find("Trump").text();
+
+            console.log(cont);
 
             $(jqueryList).each(function(){
                 //var jqueryTitleLink = jqueryTitle.split(" "); // deixa somente o <a> para poder pegar o href
