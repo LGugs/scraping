@@ -23,12 +23,6 @@ module.exports = function(){
                 if(!link.startsWith("http")){
                     link = url.concat(link);
                 }
-/*
-                let subnews = subscraping.getSub(link, jquerySubTitle, jquerySubText);
-                let subTitle = subnews.subtitle;
-                let subcontext = subnews.subcontext;
-
-                console.log(subnews + " aaaaaaaaaa ");*/
 
                 news.push({title,time,summary,link});
             })
