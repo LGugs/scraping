@@ -9,7 +9,7 @@ router.get('/', async(req,res) =>{
 
 router.get('/dictionary', async(req,res) =>{
 
-  var dados = [{word: 'copa', count: 100},{word: 'trump', count: 90},{word: 'futebol', count: 85},{word: 'crise', count: 70}];
+  var dados = [{word: 'drogas', count: 100},{word: 'Trump', count: 90},{word: 'sexo', count: 85},{word: 'morte', count: 70},{word: 'roubo', count: 50}];
 
   res.render('pages/dictionary', {dados});
 });
@@ -104,8 +104,39 @@ router.get('/g1', async(req,res) =>{
   res.render('pages/news',{site});
 });
 
+router.get('/bbcbr', async(req,res) =>{
+  let subnews = [];
+
+  let url = 'https://www.bbc.com';
+  let jqueryList = '.media-list li';
+  let jqueryTitle = 'a.media__link';
+  let jqueryTime = 'a.media__tag';
+  let jquerySummary = 'p.media__summary';
+  let jqueryTitleLink = 'a.media__link';
+
+  let jquerySubTitle = '.story-body h1';
+  let jquerySubText = '.story-body__inner p';
+
+  let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary,jqueryTitleLink);
+
+  for (let i = 0; i < news.length; i++) {
+    console.log(news[i].link);
+    let news2 = await subscraping.getSub(news[i].link,jquerySubTitle,jquerySubText);
+    subnews.push({ news2 });
+  }
+
+  var site = {
+    title : 'BBC',
+    news : {news, subnews}
+  }
+
+  res.render('pages/news',{site});
+});
+
 // not working
 router.get('/yahoo', async(req,res) =>{
+  let subnews = [];
+
   let url = 'https://br.yahoo.com';
   let jqueryList = '.O\(n\)\:f h3';
   let jqueryTitle = '.O\(n\)\:f h3';
@@ -113,6 +144,12 @@ router.get('/yahoo', async(req,res) =>{
   let jquerySummary = '.O\(n\)\:f h3';
 
   let news = await scraping.getNews(url,jqueryList,jqueryTitle,jqueryTime,jquerySummary);
+
+  for (let i = 0; i < news.length; i++) {
+    console.log(news[i].link);
+    let news2 = await subscraping.getSub(news[i].link,jquerySubTitle,jquerySubText);
+    subnews.push({ news2 });
+  }
 
   var site = {
     title : 'Yahoo!',

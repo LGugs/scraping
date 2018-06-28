@@ -45,9 +45,8 @@
         display: none;
       }
       mark {
-        background: orange;
-        color: black;
         padding: 0;
+        background-color: inherit;
       }
     </style>
   </head>
@@ -63,7 +62,27 @@
           </div>
           <div class="navbar-right">
             <ul class="nav navbar-nav">
+              <li><form class="navbar-form" action="index.html" method="post">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Insira palavra para marcar!" name="busca">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" name="button">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form></li>
               <li><a href="/dictionary">Dicionário</a></li>
+              <li class=""></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Marcações
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a id="risca">Riscar</a></li>
+                  <li><a id="cor">Esmaecer</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -78,4 +97,27 @@
       <p class="text-muted">ICOMP - Engenharia de Software - TESI</p>
     </footer>
   </body>
+
+  <script>
+    $(document).ready(function(){
+      $("#risca").click(function(){
+        if($("mark").css('text-decoration').indexOf('none') > -1){
+          $("mark").css({"text-decoration": "line-through"});
+        }else{
+          $("mark").css({"text-decoration": "none"});
+        }
+      });
+
+      $("#cor").click(function(){
+        var color = $("mark").css('color');
+        if(color == 'rgb(0, 0, 0)'){
+          $("mark").css({"color": "lightgray"});
+        }else{
+          $("mark").css({"color": "rgb(0, 0, 0)"});
+        }
+      });
+    });
+  </script>
+
+
 </html>
