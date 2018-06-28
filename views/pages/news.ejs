@@ -37,12 +37,35 @@
   </body>
 
   <script>
-    var teste = ['drogas','sexo','morte', 'Trump', 'Lula', 'assassinato', 'roubo'];
+    $(document).ready(function(){
+      $("#risca").click(function(){
+        if($("mark").css('text-decoration').indexOf('none') > -1){
+          $("mark").css({"text-decoration": "line-through"});
+        }else{
+          $("mark").css({"text-decoration": "none"});
+        }
+      });
 
-    $(".col-md-12").unmark({
-      done: function() {
-        $(".col-md-12").mark(teste);
-      }
+      $("#cor").click(function(){
+        var color = $("mark").css('color');
+        if(color == 'rgb(0, 0, 0)'){
+          $("mark").css({"color": "lightgray"});
+        }else{
+          $("mark").css({"color": "rgb(0, 0, 0)"});
+        }
+      });
+
+      var word = [];
+
+      $("#marca").click(function(){
+        word.push($('#marca_input').val());
+        alert('Palavra(s) "' + word + '" inserida(s)!');
+        $(".col-md-12").unmark({
+          done: function() {
+            $(".col-md-12").mark(word);
+          }
+        });
+      });
     });
   </script>
 

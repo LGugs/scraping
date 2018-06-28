@@ -62,16 +62,16 @@
           </div>
           <div class="navbar-right">
             <ul class="nav navbar-nav">
-              <li><form class="navbar-form" action="index.html" method="post">
+              <li class="navbar-form">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Insira palavra para marcar!" name="busca">
+                  <input id="marca_input" type="text" class="form-control" href="#" placeholder="Insira palavra para marcar!" name="busca">
                   <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit" name="button">
+                    <button class="btn btn-default" id="marca">
                       <i class="glyphicon glyphicon-search"></i>
                     </button>
                   </div>
                 </div>
-              </form></li>
+              </li>
               <li><a href="/dictionary">Dicionário</a></li>
               <li class=""></li>
               <li class="dropdown">
@@ -99,24 +99,7 @@
   </body>
 
   <script>
-    $(document).ready(function(){
-      $("#risca").click(function(){
-        if($("mark").css('text-decoration').indexOf('none') > -1){
-          $("mark").css({"text-decoration": "line-through"});
-        }else{
-          $("mark").css({"text-decoration": "none"});
-        }
-      });
 
-      $("#cor").click(function(){
-        var color = $("mark").css('color');
-        if(color == 'rgb(0, 0, 0)'){
-          $("mark").css({"color": "lightgray"});
-        }else{
-          $("mark").css({"color": "rgb(0, 0, 0)"});
-        }
-      });
-    });
   </script>
 
 
